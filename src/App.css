@@ -1,0 +1,9 @@
+.typing-dots {
+  display: inline-block;
+  font-style: italic;
+  animation: fade 1.2s infinite;
+}
+@keyframes fade {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}

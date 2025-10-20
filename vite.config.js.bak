@@ -1,0 +1,16 @@
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+export default defineConfig({
+  plugins: [react()],
+  base: "/AiChatBot/",
+  server: {
+    proxy: {
+      "/api": {
+        target: "https://aichatbot-production-5ce1.up.railway.app/", // Flask backend URL
+        changeOrigin: true,
+        secure: false,
+      },
+    },
+  },
+});
